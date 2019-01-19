@@ -1,0 +1,28 @@
+1. Write a shell script to find the sum of two numbers
+
+
+2. Write a shell script to find the factorial of a given number.
+
+
+3. Write a shell script to find whether two given strings are equal or not.
+
+
+4. Write a shell script to accept a string which is less than 10 characters. If it is more than 10 reaccept the string.
+
+
+5. Write a shell script to remove blank lines from a file.
+
+
+6. Write a Shell Script and accept a file name, find out whether the accepted entry is file or directory. If it is a file display the contents. If it is a directory, use case structure to long listing files, creating and changing the permissions of a specified file.
+
+
+7. Display all the users’ information in a desired format. Accept a login name and display login name, UID, GID, Current shell, Home directory.
+
+
+8. Accept book information like book id, author name and date of publication. Write a shell script to remove a particular info from database.
+
+
+9. Write a shell script to find out the files accessed in last ten minutes and file modified in last ten minutes.
+
+
+10. Write a shell script to locate all lines longer than 15 characters in a file.

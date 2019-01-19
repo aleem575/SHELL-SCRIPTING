@@ -1,0 +1,46 @@
+if you want nth field of a file then you go for cut command. so here cut command will display nth field as output
+
+
+---------
+SYNTAX:-
+---------
+cut -d "delimiter" -f (field number) file.txt
+
+
+
+
+vi file1.txt
+------------------------
+AndhraPradesh 1 one
+ArunachalPradesh 2 two
+Assam 3 three
+Bihar 4 four
+Chhattisgarh 5 five
+-----------------------
+
+
+
+
+#cut -d " " -f 3 file1
+
+O/P:-
+------
+one
+two
+three
+four
+five
+-------
+
+
+ASSUME IF YOU HAVE SAME TEXT FILE WITH ONE EXTRA SPACE AFTER ANDHRA PRADESH IN THAT CASE YOUR OUTPUT WILL BE CHANGED
+O/P:-
+------
+1
+two
+three
+four
+five
+-------
+
+THEN IN THIS CASE BETTER GO FOR AWK COMMAND

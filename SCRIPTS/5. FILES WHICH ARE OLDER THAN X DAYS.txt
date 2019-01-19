@@ -1,0 +1,15 @@
+----------------------------------------------------------
+HOW TO FIND FILES/DIRECTORIES WHICH ARE OLDER THAN X DAYS:-
+----------------------------------------------------------
+
+1. find files which are older than 1 day
+
+   #find current-directory command days
+   #find . -mtime -1
+
+
+
+2. find directories which are older than 1 day
+
+   #find current-directory -type d command days
+   #find . -type d -mtime -1

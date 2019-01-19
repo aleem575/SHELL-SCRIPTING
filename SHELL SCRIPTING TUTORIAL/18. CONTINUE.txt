@@ -1,0 +1,24 @@
+continue means skipping the condition provided
+
+
+
+vi file1.sh
+--------------------------------------------
+#! /bin/bash
+#continue
+for (( i=1; i<=10; i++ ))
+do
+if [ "$i" -eq 5 ] || [ "$i" -eq 10 ]
+then
+continue
+fi
+echo $i
+done
+--------------------------------------------
+
+chmod u+x file1.sh
+
+./file1.sh
+
+
+here the iteration skips for 5 and 10.

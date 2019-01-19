@@ -1,0 +1,24 @@
+WALL command is used to send message to all users
+ex:- wall “stop all your work”
+
+
+
+MAIL command are used for sending mails
+
+
+
+
+vi file1.sh
+-----------------------------------------------------
+if [ $? -ne 0 ]
+then
+    <send me email however you want to about failure>
+else
+    <send me email about success how ever you want> 
+fi
+
+-------------------------------------------------------
+
+chmod u+x file1.sh
+ 
+./file1.sh

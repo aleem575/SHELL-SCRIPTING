@@ -1,0 +1,115 @@
+sort command is used to categorize based on numbers, columns, capaital letters, small letters
+
+sort command dislays the sorted values as output, it doesnt modufy the file
+
+sort works only with columns, thats why we exampled with columns
+
+1)vi sortalpha.txt
+---------------
+m
+a
+n
+i
+---------------
+
+sort sortalpha.txt
+o/p:-
+----
+a
+i
+m
+n
+
+
+
+2)vi sortnumb.txt
+---------------
+5
+3
+1
+4
+2
+---------------
+
+sort sortnum.txt
+o/p:-
+----
+1
+2
+3
+4
+5
+
+
+3)vi sortword.txt
+---------------
+mani
+hema
+pinky
+raja
+devi
+---------------
+
+sort sortword.txt
+o/p:-
+----
+devi
+hema
+mani
+pinky
+raja 
+
+
+4)if you want to redirect the o/p to a file
+sort sortcmd.txt > output.txt
+cat output.txt
+-------------------
+devi
+hema
+mani
+pinky
+raja
+
+
+
+5)vi sortrevnumb.txt
+---------------
+5
+3
+1
+4
+2
+---------------
+
+#sort -r sortcmd.txt
+o/p:-
+----
+5
+4
+3
+2
+1
+
+
+
+6) vi sortcolumn.txt     [based on column it sorts out]
+-----------------------
+3 mani 26 "hi"
+1 raja 17 "hey"
+2 pinky 16 "hai"
+4 hema 28 "hu"
+------------------------
+
+#sort -k2 sortcolumn.txt
+o/p:-
+---------------
+4 hema 28 "hu"
+3 mani 26 "hi"
+2 pinky 16 "hai"
+1 raja 17 "hey"
+----------------
+
+
+
+
+

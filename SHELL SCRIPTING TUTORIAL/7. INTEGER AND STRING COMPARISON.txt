@@ -1,0 +1,36 @@
+(I)Integer comparisons:-
+------------------------
+
+1)  -gt = greater than------------------------------------------if [“$a” -gt “$b”]
+
+2)  -ge= greater than or equal to-------------------------------if [“$a” -ge “$b”]
+
+3)  -lt= less than----------------------------------------------if [“$a” -lt “$b”]
+
+4)  -le= less than or equal to----------------------------------if [“$a” -le “$b”]
+
+5)  -eq=equal to------------------------------------------------if [“$a” -eq “$b”]
+
+6)  -ne=not equal to--------------------------------------------if [“$a” -ne “$b”]
+
+	*If you use >,>= (or) <=, < then you have to use like this ex:   ((“a” <=  “b”)) in integer comparison
+
+
+
+
+
+(II)String comparisons:-
+------------------------
+1)  =(equal to)------------------------------if [“$a” = “$b”]
+
+2)  !=(not equal to)-------------------------if [“$a” != “$b”]
+
+3)  >(greater than)--------------------------if [[“$a” > “$b”]]
+
+4)  <(less than)-----------------------------if [[“$a” < “$b”]]
+
+
+	*If you use >,>= (or) <=, < then you have to use like this ex:   [[“a” <=  “b”]]
+
+
+

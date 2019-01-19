@@ -1,0 +1,46 @@
+when we have 2 conditions then we go for if else
+
+
+
+
+IF ELSE SYNTAX:-
+---------------
+
+If [ conditional expression ]
+then
+	statement1
+else
+	statement2
+fi
+
+
+
+
+Q) enter two values and check weather they are equal
+
+A) vi file1.sh
+--------------------------------------------
+#! /bin/sh
+
+#comparing two variables
+
+read var1
+read var2
+
+if [ "$var1" = "$var2" ]
+then
+echo "condition is true"
+else
+echo "condition is false"
+fi
+-----------------------------------------------
+
+
+chmod u+x file1.sh
+
+
+./file1.sh
+
+
+o/p:- 5 7
+      condition is false

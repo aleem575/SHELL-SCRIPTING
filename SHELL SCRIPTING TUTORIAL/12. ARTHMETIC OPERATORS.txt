@@ -1,0 +1,55 @@
+1) + is addition
+
+2) - is subtraction
+
+3) * is multiplication
+
+4) / is division
+
+5) % is modulus
+
+
+
+vi file1.sh
+--------------------------------------------------------------
+#! /bin/bash
+
+
+read num1
+read num2
+
+echo "sum of two num is: $(( num1 + num2 ))"
+echo "the diff of two numbers is: $(( num1 - num2 ))"
+echo "the prod of two numbers is: $(( num1 * num2 ))"
+echo "the div of two numbers is: $(( num1 / num2 ))"
+echo "the mod of two numbers is: $(( num1 % num2 ))"
+--------------------------------------------------------------
+
+
+chmod u+x file1.sh
+
+./file1.sh
+
+
+
+
+ARTHMETIC OPERATIONS FOR DECIMALS:-
+----------------------------------
+arthmetic operators doesnt work for decimals so we use command called "bc"
+
+
+vi file1.sh
+-------------------------------------
+! /bin/bash
+#arithmetic operators for decimals
+clear
+read num1
+read num2
+echo "$num1+$num2" | bc
+
+-----------------------------------------
+
+
+chmod u+x file1.sh
+
+./file1.sh

@@ -1,0 +1,65 @@
+
+
+$0 = returns current script name
+
+
+$1-$9 = returns whatever we pass
+
+	*after $9 we have to use like this ${10}, ${11}......${n}
+
+
+$# = number of arguments passed
+
+
+$? = the exit status of last command executed (if $? = 0 then last command executed sucessfully)
+
+
+$$ = return the process id of script we are running
+
+
+$* = 
+
+
+$@ = all arguments
+
+
+$! = 
+
+
+---------------------------
+HOW TO PASS ARGS FROM CLI:-
+---------------------------
+./script_name arg1 arg2..
+ 
+ex:- ./file1.sh ram john
+
+
+
+Q) write a script to pass arguments?
+
+A) vi file1.sh
+---------------------------------------------
+#! /bin/bash
+
+#passing an argument
+
+echo “the script name is: $0”
+
+echo the first argument is :$1
+
+echo the second argument is :$2
+
+echo total arguments are:$#
+
+echo status of last command:$?
+-------------------------------------------------
+
+chmod u+x file1.sh
+
+./file1.sh ram john
+
+
+o/p:-   the script name is: file1.sh
+        the first argument is :ram
+	the second argument is :john
+	total arguments are:2

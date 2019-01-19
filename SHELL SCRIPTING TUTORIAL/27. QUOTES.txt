@@ -1,0 +1,45 @@
+There are 3 types of quotes in linux shell script
+
+
+1. DOUBLE QUOTES = "" :-
+-----------------------
+
+    double quotes are used to print the text/string and variables
+
+
+ex:-
+
+1) echo "helloworld"-----------------o/p:-  helloworld
+
+
+2) var1=john
+   echo "$var1"----------------------o/p:- john
+
+
+
+
+2. SINGLE QUOTES = '' :-
+-----------------------
+
+      single quotes are used to print the text which is present in it
+
+
+ex:-
+
+1) echo 'hellowrld'-----------------o/p:-  helloworld
+
+
+2) var1=john
+   echo '$var1'----------------------o/p:- $var1
+
+
+
+3. REVERSE QUOTES = `` :-
+-----------------------
+	
+	reverse quotes are used execute commands
+
+
+ex:-
+
+1) echo "the server name is `hostname`" --------------------->o/p:- server name is host1.com

@@ -1,0 +1,54 @@
+1. && (and):-
+------------
+	It is used for 2 or more condition and returns true if all conditions are true
+
+
+
+vi file1.sh
+--------------------------------------------------------------
+#! /bin/bash
+
+echo "enter the age"
+
+read age
+
+if [ "$age" -gt 18 ] && [ "$age" -lt 50 ]
+then
+echo "yes entered age is right and condition is satisfied"
+else
+echo "entered age is wrong and condition is not satisfied"
+fi
+--------------------------------------------------------------
+
+chmod u+x file1.sh
+
+./file1.sh
+
+
+
+
+2. ||(or) :-
+----------
+	It is used for 2 or more conditions and returns true if one condition satisfies
+
+
+
+vi file1.sh
+-------------------------------------------------------------------------------
+#! /bin/bash
+
+echo "enter country name"
+
+read country
+
+if [ "$country" = japan ] || [ "$countrty" = america ]
+then
+echo "$country gets indian  citizenship"
+else
+echo "$country wont get indian citizenship"
+fi
+----------------------------------------------------------------------------------
+
+chmod u+x file1.sh
+
+./file1.sh

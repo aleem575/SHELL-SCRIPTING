@@ -1,0 +1,29 @@
+HOW TO WRITE A SHELL SCRIPT AND RUN:-
+=====================================
+
+1. open a file with .sh extension(. sh is to know others that it is script)
+   #vi file1.sh
+
+
+2. start the script with shebang(shebang means the absolute path of bash interpreter)
+   #! /bin/bash
+ 
+  
+3. write heading with comment before
+   #shell script example
+
+
+4. write commands with logic
+   #echo "hi"
+
+
+5. close the file
+   #esc +: +wq
+
+
+6. change the file permission
+   #chmod u+x file1.sh
+
+
+7. to run the script
+   #bash file1.sh (or) ./file1.sh

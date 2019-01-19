@@ -1,0 +1,61 @@
+SCRIPT FOR PINGING OTHER SERVERS AND MAILING IF THEY ARE UN REACHABLE:-
+=======================================================================
+
+1. write all host entries in a file
+   #vi /hosts.txt
+------------------------------------
+server1.com
+server2.com
+server3.com
+192.168.91.23
+---------------------------------------
+
+
+
+vi script1.sh
+---------------------------------------------------
+#!/bin/bash 
+for var in `cat /hosts.txt`
+do
+ ping -c5 $var >/dev/null 2>&1
+ if [ $? -eq 0 ]
+  then
+   echo "the site $var is up"
+  else
+   echo "the site $var is down"| mail -s "$var down" kommojuvenkata@gmail.com
+ fi
+done
+
+
+(or)
+
+
+while read var1
+do
+ping -c5 $var1 >/dev/null 2>&1
+if [ $? -eq 0 ]
+then
+ echo "the site $var1 is up"
+else
+  echo "the site $var1 is down" | mail -s "subject" kommoju123@gmail.com
+fi
+done <hosts.txt
+
+
+
+------------------------------------------------------
+
+# chmod +x script1.sh
+
+# ./script1.sh
+
+
+
+
+
+
+EXPLAINATION:-
+--------------
+we will give hosts.txt as a input
+
+now every entry will be iterated and checked if they are up and running

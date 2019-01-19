@@ -1,0 +1,29 @@
+DISPLAYING CONTENTS OF A FILE:-
+===============================
+
+
+vi script1.sh
+----------------------------------------------
+#! /bin/bash
+
+echo "enter a filename to display its content"
+
+read file_name
+
+cat "$file_name" 
+-----------------------------------------------   
+
+
+chmod u+x file1.sh
+
+./script1.sh              
+
+
+
+EXPLAINATION:-
+=============
+
+take the input from keyboard
+
+
+then cat command will display the contents of a file

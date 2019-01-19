@@ -1,0 +1,7 @@
+delimiter is the one which seperates fields
+
+Ex: - cat /etc/passwd
+
+Mani:x:0:0:mani:mani:/sbin/login
+
+Here : is called delimiter

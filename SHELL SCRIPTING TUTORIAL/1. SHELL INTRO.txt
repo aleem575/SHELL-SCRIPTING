@@ -1,0 +1,43 @@
+1) shell script is a series of commands put together in a text file with some logic and execute them at once . Instead of executing 
+   every time 
+
+
+2) Shell script written in one shell doesn’t run in other shell.
+
+
+3) System related things, daily tasks, automation we go with scripting, where as we will go for programming for business applications
+
+
+WHAT IS SHELL:-
+--------------
+   A shell is a command line interpreter which takes the command from user and execute them. shell acts as a interface between kernel
+and user. 
+
+*interpreter is executing code line by line
+
+
+TYPES OF SHELL:-
+--------------
+1. c shell
+2. bash shell
+3. korn shell
+4. power shell
+
+out of which bash shell is widely used & the extension of bash shell is .sh
+
+
+
+USES OF SHELL SCRITING:-
+-----------------------
+1. automating repatative tasks
+2. scheduling multiple jobs at once
+3. save lot of time instead of manually exceuting
+4. .....
+
+
+
+BLIND RULE:-
+-----------
+Command	Option Input
+ex:- cat -n filename
+     ls -l filename

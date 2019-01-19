@@ -1,0 +1,36 @@
+"read" command takes value from keyboard and assigns it to variable
+
+*read is system variable
+
+
+=======
+USAGE:-
+=======
+
+#read variable
+
+read -sp variable---------------->sp option is used to hide text, generally used while entering password
+
+
+
+
+Q) write a script to take values from keyboard and assigsn it to variable
+
+A) vi file1.sh
+---------------------------------------------------
+#! /bin/bash
+
+echo "enter student name"
+
+read var1
+
+echo "the student name is : $var1"
+
+----------------------------------------------------
+
+chmod u+x filename
+
+./file1.sh
+
+
+o/p:- if you enter john, then the student name is john

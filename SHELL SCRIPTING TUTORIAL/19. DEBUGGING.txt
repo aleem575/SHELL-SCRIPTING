@@ -1,0 +1,43 @@
+If you want to know where script is going wrong you can use this debugging feature and fix that bug
+
+
+SYNTAX:-
+--------
+11. bash –x ./filename.sh
+
+(or)
+
+2. inside a file
+
+set –x-------------------------------here is the point where debugging starts
+   code
+   code
+   code
+set +x-----------------------------here is the point where debugging stops
+
+
+
+3. set -eu------------->where e = it will exit, if there is an error
+                        where u = it will stop the script if there is a problem
+
+
+
+
+
+vi file1.sh
+----------------------------------------------------
+#! /bin/bash
+#debugging
+set -x
+read a
+read  b
+if [ "$a" -eq "$b" ]
+then
+echo "both numbers are same"
+else
+echo "both numbers are different"
+fi
+set +x
+----------------------------------------------------
+
+bash -x file1.sh

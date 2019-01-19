@@ -1,0 +1,96 @@
+sed command can be used in many ways like searching, replacing, insertion, deletion, filter
+though mostly used for substitution, find and replace
+ 
+sed command is similar to ctrl+f in windows
+
+sed command dont modify your text but we can change it using some options
+
+
+
+
+
+# vi file2
+-------------------------------------------
+unix is a concept, unix has many flavours
+unix is the first cli
+unix is so powerful
+-------------------------------------------
+
+1) replace unix with linux
+    #sed 's/unix/linux/' file2
+
+
+o/p:-
+-------------------------------------------
+linux is a concept, unix has many flavours
+linux is the first cli
+linux is so powerful
+-------------------------------------------
+o/p:- will only be displayed on terminal, will not save in text file
+
+
+
+
+2) if you want to replace nth occurence in a file ex:- second repeated unix word has ob replaced with linux
+    #sed 's/unix/linux/2' file2
+
+
+o/p:-
+------------------------------------------
+unix is a concept, linux has many flavours
+unix is the first cli
+unix is so powerful
+-------------------------------------------
+
+o/p:- will only be displayed on terminal, will not save in text file
+
+
+
+3) replacing all unix strings with linux
+   #sed 's/unix/linux/g' file2
+
+
+o/p:-
+---------------------------------------------
+linux is a concept, linux has many flavours
+linux is the first cli
+linux is so powerful
+----------------------------------------------
+
+
+
+
+4) if you want to replace string in a particular line (say 3rd line)
+   #sed '3 s/unix/linux/' geekfile.txt
+
+
+o/p:-
+--------------------------------------------
+unix is a concept, unix has many flavours
+unix is the first cli
+linux is so powerful
+----------------------------------------------
+
+
+
+5) to filter a line in a file
+   #sed -n '/John/p' file2
+
+
+o/p:-
+------------------------------------------
+5, Johnny Trash, Title 482, Price $6.50
+-------------------------------------------
+
+
+
+6) to delete nth line in a file
+   #sed '5d' file2
+
+o/p:-
+----------------------------------------------
+unix is a concept, unix has many flavours
+unix is the first cli
+linux is so powerful
+unix recieves good pay
+-----------------------------------------------

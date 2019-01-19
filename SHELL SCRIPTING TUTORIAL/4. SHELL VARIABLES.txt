@@ -1,0 +1,52 @@
+A variable is used to store a value.
+ex:- a=20
+
+
+there are 2 types of variables
+
+(i) system variables:-
+    -----------------
+    these system vraibles are predefined
+
+      Ex:- echo, pwd
+
+
+(ii) user defined variables:-
+     -----------------------
+     the variables which are defined by the user
+      
+ 	Ex:- a=20
+
+
+*variables name should not start with numbers
+
+Parameters = 
+
+arguments = 
+
+
+
+
+
+Q) write a shell script to print a name
+
+vi file1.sh
+--------------------------------------------------
+#! /bin/bash
+
+#printing a name
+
+var1 = mark
+
+var2 = john
+
+echo $var1 $var2
+--------------------------------------------------
+
+
+chmod u+x file1.sh
+
+./file1.sh
+
+
+o/p:- john and mark names will be displayed

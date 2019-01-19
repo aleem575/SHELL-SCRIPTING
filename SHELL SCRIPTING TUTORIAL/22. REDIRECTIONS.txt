@@ -1,0 +1,63 @@
+Generally we give input from keyboard and output will be displayd on terminal
+
+
+INPUT<-------------------KEYBOARD
+|
+|
+|
+|
+|
+OUTPUT---------------->TERMINAL
+
+
+
+* we can replace keyboard and terminal with files
+
+
+
+INPUT<-------------------FILE1
+|
+|
+|
+|
+|
+OUTPUT---------------->FILE2
+
+
+
+In file1 i put uptime command and result will be stored in file2
+
+
+we have 2 things
+
+(i) STDIN[standard input]:-
+---------------------------
+	It is represented as <
+
+   EX:- mail -s subject mani@gmail.com <file1
+
+now whatever data present in file1 will be sent to that mail
+
+
+(ii) STDOUT[standard output]:-
+------------------------------
+	It is represented as >
+
+     EX:-ls >file2
+
+Now the result of ls will be stored in file2
+
+
+STDOUT is classified into 2 types
+
+(i) STDOUT(1>):-
+
+
+(ii) STDERR(2>)
+
+
+2>&1  means both error and output will go into single file
+
+
+>/dev/null means your output will be thrashed or store in a null file
+

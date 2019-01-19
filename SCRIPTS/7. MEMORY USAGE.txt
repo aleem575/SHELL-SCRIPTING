@@ -1,0 +1,45 @@
+SENDING EMAIL WHEN MEMORY IS LESS:-
+==================================
+
+
+vi script1.sh
+---------------------------------------------------
+#!/bin/bash 
+
+FREE=$(free -mt | grep Total | awk '{print $4}')
+
+if [[ "$FREE" -le 100  ]]; then
+
+echo "Warning, server memory is running low" | mail -s "$FREE less memory"kommojuvenkata@gmail.com
+	else
+   echo "nothing to worry"
+
+fi
+
+exit 0
+------------------------------------------------------
+# chmod +x script1.sh
+
+# ./script1.sh
+
+
+
+
+===============
+EXPLAINATION:-
+===============
+1. BIN BASH CHECKING
+
+2. WHAT IS THE SUBJECT
+
+3. FROM ADDRESS
+
+4. TO ADDRESS
+
+5. EXECUTING COMMAND FOR FREE MEMORY IN MB
+
+6. CHECK IF FREE MEMORY IS LESS THAN 100MB OR NOT
+
+7. THEN SEND EMAIL 
+
+8. ELSE NO

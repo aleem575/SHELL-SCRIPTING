@@ -1,0 +1,57 @@
+Case is used to simplify nested if statment
+
+SYNTAX:-
+--------
+read variable
+
+case $variable in
+
+   pattern1)
+      Statement1;;
+
+   pattern2)
+      Statement2 ;;
+
+   pattern3)
+      Statement3;;
+.
+.
+.
+      *)
+         Statement default ;;
+esac
+	
+
+
+
+Case will read variable, if variable matches pattern1, it executes statment1, otherwise read second variable if matches then prints
+second statment and so on. 			
+			if you enetr invalid option then exceutes default
+
+
+
+vi file1.sh
+--------------------------------------------------
+read fruit
+
+case  $fruit in
+
+   "apple") 
+         echo "Apple pie is quite tasty."  ;;
+
+   "banana") 
+          echo "I like banana nut bread."  ;;
+
+   "kiwi") 
+    echo "New Zealand is famous for kiwi."  ;;
+
+    *)
+     echo "entered invalid option"  ;;
+esac
+-----------------------------------------------------
+
+chmod u+x file1.sh
+
+./file1.sh
+
+

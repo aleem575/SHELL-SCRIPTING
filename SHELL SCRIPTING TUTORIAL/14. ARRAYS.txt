@@ -1,0 +1,88 @@
+bash supports one dimensional array
+
+SYNTAX:-
+--------
+ARRAY_NAME=('element1' 'element2' 'element3')
+
+
+element1 = 0th index position
+
+element2 = 1st index position
+
+element3 = 2nd index position
+
+array length = 3
+
+
+1. To print all elements of an array?
+    echo "${ARRAYNAME[@]}"
+
+
+2. To print an element at particular index?
+    echo "${os[x]}"  where x=index number
+
+
+3. To print all the array indexes?
+    echo "${!os[@]}"
+
+
+4. To print the array length?
+    echo "${#os[@]}"
+
+
+5. To add an array at nth index?
+    ARRAYNAME[n]='xxxxx'
+
+
+6. To remove nth element in an array?  
+    unset ARRAYNAME[n]
+
+
+7. you can also add string to an array
+   string=mk
+   echo “${string[0]}”
+
+
+
+vi file1.sh
+-------------------------------------------------------------------------------
+#! /bin/bash
+
+#simple 1d array
+
+os=( 'windows' 'mac' 'linux')
+
+os[3]='solaris'
+
+unset os[2]
+
+echo "it prints elements of an array"
+
+echo "${os[@]}"
+
+echo "it prints element at that index"
+
+echo "${os[1]}"
+
+echo "if there are n number in an array it prints n number of indexes"
+
+echo "${!os[@]}"
+
+echo "to print how many elements are there in a array"
+
+echo "${#os[@]}"
+
+echo "adding elements in (n+1)array"
+
+echo "to remove an element from particular index"
+---------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+

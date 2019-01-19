@@ -1,0 +1,60 @@
+AWK command process rows and columns in a file. AWK searches for a text which matches the pattern in a file, complex tasks can be done
+with awk commnand/awk script.
+
+
+========
+syntax:-
+========
+awk 'pattern {action}' input-file > output-file
+
+#awk command reads each line of input file, if line contains pattern aplly action and redirect to output file
+
+
+
+=====================================
+cat employee.txt
+--------------------------------
+   f1    f2       f3      f4
+r1 ajay manager account 45000
+r2 sunil clerk account 25000
+r3 varun manager sales 50000
+r4 amit manager account 47000
+r5 tarun peon sales 15000
+r6 deepak clerk sales 23000
+r7 sunil peon sales 13000
+r8 satvik director purchase 80000
+--------------------------------
+where f=field/column, r=row/line
+=======================================
+
+
+
+1. TO PRINT THE EMPLOYEE.TXT
+   #awk '{print;}' employee.txt
+
+
+2. TO PRINT ONLY SECOND FEILD OF EMPLOYEE.TXT
+   #awk '{ print $2; }' employee.txt 
+
+
+3. TO PRINT ONLY 5TH LINE OF EMLOYEES.TXT WHICH MATCHES TARUN PATTERN
+   #awk '/tarun/' employee.txt
+
+
+4.  FIND THE EMPLOYEE WHO EARNS MORE THAN 50000 IN EMPLOYEES.TXT
+    #awk '$4 >50000' employee.txt
+
+
+5. IF YOU WANT TO PRINT 1ST FIELD IN /ETC/PASSWD FILE
+   #awk -F ":" '{ print $1; }' /etc/passwd
+
+
+6. IF YOU WANT TO FIND ANY USER BY NAME "ANSIBLE" IN /ETC/PASSWD FILE
+   #awk '/ansible/' /etc/passwd
+
+
+
+
+
+
+

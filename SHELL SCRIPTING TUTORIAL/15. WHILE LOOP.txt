@@ -1,0 +1,32 @@
+Loops are used to execute staments repeatedly iterative 
+
+
+WHILE = the statment gets executed only if the condition is true. Loop terminates if the condition is false
+
+
+SYNTAX:-
+--------
+while [ condition ]
+do
+   Statement1
+   Statement2
+done
+
+
+
+1. vi file1.sh
+-------------------------------------------
+#! /bin/bash
+
+i=1
+
+while [ $i -le 10 ]
+do
+echo "hi $i"
+   ((i++))
+done
+--------------------------------------------
+
+chmod u+x file1.sh
+
+./file1.sh

@@ -1,0 +1,108 @@
+SENDING EMAIL WHEN DISK SPACE IS LESS:-
+=======================================
+
+
+vi script1.sh
+---------------------------------------------------
+#!/bin/bash
+
+i=2
+var1=$(df -h |grep -v "Filesystem" | awk '{ print $5 }' | sed 's/%//g')
+threshold=30
+for percent in $var1;
+do
+ if [ "$percent" -gt "$threshold" ]
+  then
+mountpoint=`df -kh | head -$i | tail -1| awk '{print $6}'`
+
+echo "the mount point $mountpoint is ${percent}%, immediate action required"
+ fi
+let i=$i+1
+done
+
+
+------------------------------------------------------
+# chmod +x script1.sh
+
+# ./script1.sh
+
+
+
+
+===============
+EXPLAINATION:-
+===============
+1. i=2 means first line is filesystem, use, available headings which are not uses so we skipped i=1
+
+
+2. df -h |grep -v "Filesystem" | awk '{ print $5 }' | sed 's/%//g'------>will give you output in numbers otherwise it would be 
+   difficult to compare with numeric
+    Ex:- comand o/p:- 32   otherwise 32%
+
+
+3. we have defined threshold value in a varaible
+
+4. df -kh | head -$i | tail -1| awk '{print $6}'-------------->this command is telling to print last line of n heads
+    Ex:-head -3 |tail -1------>to print 3rd line
+
+5. iterating i=$i+1
+
+
+
+df -h
+----------------------------------------------------------------------------------------------
+Filesystem               Size  Used Avail Use% Mounted on
+/dev/mapper/centos-root   17G  5.4G   12G  32% /
+devtmpfs                 897M     0  897M   0% /dev
+tmpfs                    912M     0  912M   0% /dev/shm
+tmpfs                    912M  9.0M  903M   1% /run
+tmpfs                    912M     0  912M   0% /sys/fs/cgroup
+/dev/sda1               1014M  179M  836M  18% /boot
+tmpfs                    183M   28K  183M   1% /run/user/1000
+/dev/sr0                 4.3G  4.3G     0 100% /run/media/jenkins/CentOS 7 x86_64
+------------------------------------------------------------------------------------------   
+
+
+
+now we have to remove first line so use grep -v "Filesystem"
+
+df -h |grep -v "Filesystem"
+--------------------------------------------------------------------------------------------
+/dev/mapper/centos-root   17G  5.4G   12G  32% /
+devtmpfs                 897M     0  897M   0% /dev
+tmpfs                    912M     0  912M   0% /dev/shm
+tmpfs                    912M  9.0M  903M   1% /run
+tmpfs                    912M     0  912M   0% /sys/fs/cgroup
+/dev/sda1               1014M  179M  836M  18% /boot
+tmpfs                    183M   28K  183M   1% /run/user/1000
+/dev/sr0                 4.3G  4.3G     0 100% /run/media/jenkins/CentOS 7 x86_64
+---------------------------------------------------------------------------------------------
+
+
+now we want only 5th column
+
+df -h |grep -v "Filesystem" | awk '{ print $5 }'
+----------------------------------------------------------------------------------
+32%
+0%
+0%
+1%
+0%
+18%
+1%
+100%
+-----------------------------------
+
+now we want to remove % inoder for integer comparison
+
+df -h |grep -v "Filesystem" | awk '{ print $5 }' | sed 's/%//g'
+---------------------
+32
+0
+0
+1
+0
+18
+1
+100
+----------------

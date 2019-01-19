@@ -1,0 +1,47 @@
+SENDING EMAIL WHEN MEMORY IS LESS:-
+==================================
+
+
+vi script1.sh
+---------------------------------------------------
+#! /bin/bash
+cpu=$(sar 2 2 |grep Average |awk -F" " '{print 100.0 -$NF}') #(or) cpu=`sar 2 2 |grep Average |awk -F" " '{print 100.0 -$NF}'`
+
+gpu=${cpu%%.*}
+
+threshold=80
+
+if [ "$gpu" -gt "$threshold" ]
+then
+echo "cpu is taking $gpu very high immediate action required"
+else
+echo "not an issue"
+fi
+
+------------------------------------------------------
+# chmod +x script1.sh
+
+# ./script1.sh
+
+
+
+
+===============
+EXPLAINATION:-
+===============
+1. we will get load average from sar 2 2 command
+
+2. then we are greping Average
+
+3. we are subtracting 100-idle
+
+4. comparing the 100-value with threshold
+
+
+*where NF= nth field
+
+
+
+
+
+ps -eo pid,user,%cpu --sort=-%cpu

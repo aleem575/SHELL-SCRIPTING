@@ -1,0 +1,33 @@
+when we have condition, then we go for "if"
+
+
+IF THEN FI SYNTAX:-
+--------------------
+
+if [ conditional expression ]
+
+then
+	statement1
+	statement2.
+fi         
+
+
+
+Q) write a script to check if given value is greater than 9
+
+A) vi file1.sh
+-----------------------------------------------
+#! /bin/sh
+
+echo "enter a value which is greater than 9"
+read var1
+
+if [ $var1 -gt 9 ]
+then
+	echo "yes $var1 is greater than 9"
+fi         
+-----------------------------------------------
+
+
+o/p:- 10
+      "yes 10 is greater than 9"

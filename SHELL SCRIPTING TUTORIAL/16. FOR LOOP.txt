@@ -1,0 +1,88 @@
+For loop is used to execute statments sequentially according to the condition given
+	ex:-if value is specified from 1 to 10 then it will execute from 1st statement to 10th statement
+
+
+SYNTAX-1:-
+---------
+    for variablename in list
+do
+ command1
+ command2 
+done
+
+
+
+SYNTAX-2:-
+---------
+for variablename in command1 command2 ............
+do
+$variablename
+done
+
+
+
+SYNTAX-3:-
+---------
+for (( expr1; expr2; expr3 ))
+do
+ command1
+ command2
+done
+
+
+
+SYNTAX-4:-
+---------
+    for variablename in file1 file2 ………filen
+do
+ command1 on $variablename
+ command2 on $variablename
+done
+
+
+
+vi file1.sh
+------------------------------
+#! /bin/bash
+#for loop2
+for var in f1 f2 
+do
+cat $var
+done
+-----------------------------
+
+
+
+vi file1.sh
+---------------------------------------
+#! /bin/bash
+# for loop
+for var in  pwd  who ls
+do
+echo "----------$var------------------"
+$var
+done
+--------------------------------------
+
+
+
+vi file1.sh
+--------------------------------------
+#! /bin/bash
+#for loop3
+for fruit in apple banana orange mango
+do
+echo "$fruit"
+done
+--------------------------------------
+
+
+vi file1.sh
+------------------------------------
+#! /bin/bash
+#for loop3
+for (( i=1; i<=5; i++ ))
+do
+echo $i
+done
+------------------------------------

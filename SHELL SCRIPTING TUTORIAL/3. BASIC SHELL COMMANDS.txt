@@ -1,0 +1,8 @@
+1. to see our current shell
+   #$0
+
+
+2. #! is called shebang, it is used to pass instruction to /bin/sh where /bin/sh is an interpreter
+
+
+5. 

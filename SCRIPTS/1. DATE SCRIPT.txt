@@ -1,0 +1,32 @@
+SCRIPT FOR DISPLAYING DATE:-
+==================================
+
+vi script1.sh
+---------------------------------------------------
+#!/bin/bash 
+
+DATE=$(date +%F)
+
+echo "todays date is : $DATE"
+
+exit 0
+------------------------------------------------------
+
+# chmod +x script1.sh
+
+
+# ./script1.sh
+
+
+
+
+
+
+EXPLAINATION:-
+--------------
+
+date is a linux command
+
+date --help to know more about options like "%F"
+
+DATE is a variable which stores command output

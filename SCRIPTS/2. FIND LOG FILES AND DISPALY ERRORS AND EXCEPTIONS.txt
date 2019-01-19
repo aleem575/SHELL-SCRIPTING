@@ -1,0 +1,28 @@
+---------------------------------------------------------
+HOW TO FIND LOG FILES AND DISPALY ERRORS AND EXCEPTIONS:-
+---------------------------------------------------------
+
+1. how to find "errors" & "exceptions" in a log file
+
+  # cat logfile |grep errors (or) # cat logfile |grep exceptions
+
+
+
+2. how to find "errors" & "exceptions" in 3 files namely file1.log, file2.log, file3.log uder shell script directory
+  
+   [root@host2 shellscript] #find . -name "*.log" -exec grep "exception" {} \;
+
+
+=============
+EXPLAINATION:-
+=============
+here "find" is used to find the log files
+
+exec command is like for loop, it will iterate all the files
+
+grep is used to search the word error and exception
+
+
+
+
+
